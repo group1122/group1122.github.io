@@ -1,0 +1,260 @@
+## Git 基础
+
+1. 创建空仓库  
+
+   ```
+   git init
+   ```
+
+2. 提交文件
+
+   ```
+   git add .
+   ```
+
+   
+
+3.  上传追踪
+
+   ```
+   git commit -m  "注释"
+   ```
+
+   
+
+4.  克隆github里面
+
+   ```
+    git clone https://github.com/libgit2/libgit2
+   ```
+
+   
+
+5.  检查文件状态
+
+   ```
+   git status
+   ```
+
+   
+
+6.  查看更新了哪些部分
+
+   ```
+   git diff
+   ```
+
+   
+
+7.   对比暂存文件与最后一次提交的差异
+
+   ```
+   git diff --staged
+   ```
+
+8.  查看已经暂存起来的变化
+
+   ```
+   git diff --cached
+   ```
+
+9. 记录移除文件的操作
+
+   ```
+    git rm PROJECTS.md
+   ```
+
+   
+
+10.  像保留到磁盘但是不想让Git继续跟踪
+
+    ```
+     git rm --cached README
+    ```
+
+    
+
+11.  移动文件
+
+    ```
+    git mv file_from file_to
+    ```
+
+    
+
+12.  查看提交历史
+
+    ```
+    git log
+    ```
+
+    
+
+13.  查看提交的差异
+
+    ```
+    git log -p
+    ```
+
+    
+
+14. 查看提交的简约信息
+
+    ```
+    git log --stat
+    ```
+
+    
+
+15. 选择格式展示提交历史. online 会将每个提交放在一行显示
+
+    ```
+    $ git log --pretty=oneline
+    ```
+
+16.  重新提交文件
+
+    ```
+    git commit --amend
+    ```
+
+    
+
+17.  取消暂存的文件
+
+    ```
+    git reset HEAD CONTRIBUTING.md
+    ```
+
+     
+
+18.  撤销对文件的修改
+
+    ```
+    git checkout -- CONTRIBUTING.md
+    ```
+
+    
+
+19.  查看远程仓库
+
+    ```
+    git remote
+    ```
+
+    也可以指定选项 `-v`，会显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL。
+
+20.  添加新的远程仓库
+
+    ```
+    remote add pb https://github.com/paulboone/ticgit
+    ```
+
+     
+
+21.  从远程仓库中抓取与拉取
+
+    ```
+    git fetch origin
+    ```
+
+    
+
+22. 推送到远程仓库
+
+    ```
+    git push origin master
+    ```
+
+    
+
+23.  查看某个远程仓库
+
+    ```
+    git remote show origin
+    ```
+
+    
+
+24.  重命名远程仓库
+
+    ```
+    git remote rename pb paul
+    ```
+
+    
+
+25.   移除远程仓库
+
+    ```
+    git remote remove paul
+    ```
+
+    
+
+26.  列出标签
+
+    ```
+    git tag
+    ```
+
+    
+
+27.  按照特定模式查找标签
+
+    ```
+     git tag -l "v1.8.5*"
+    ```
+
+    
+
+28.   创建附注标签
+
+    ```
+     git tag -a v1.4 -m "my version 1.4"
+    ```
+
+    
+
+29.  查看标签信息和对应提交信息
+
+    ```
+    git show v1.4
+    ```
+
+     
+
+30.  创建轻量标签
+
+    ```console
+    git tag v1.4-lw
+    ```
+
+31.   后期打标签
+
+    ```
+    git log --pretty=oneline
+    ```
+
+    ```
+    git tag -a v1.2 9fceb02
+    ```
+
+    
+
+32.  删除标签
+
+    ```
+    git tag -d v1.4-lw
+    ```
+
+33.  删除远程标签
+
+    ```
+    git push origin --delete <tagname>
+    ```
+
+    
+
+34. 
+
